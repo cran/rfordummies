@@ -2,7 +2,9 @@
 
 # Installing and Loading ggplot2
 
+\dontrun{
 install.packages("ggplot2")
+}
 library("ggplot2")
 
 # Looking At Layers
@@ -22,7 +24,8 @@ ggplot(faithful, aes(x=eruptions, y=waiting)) + geom_point() + stat_smooth()
 ### Creating a bar chart
 
 ggplot(quakes, aes(x=depth)) + geom_bar()
-ggplot(quakes, aes(x=depth)) + geom_bar(binwidth=50)
+# ggplot(quakes, aes(x=depth)) + geom_bar(binwidth=50) # <- Old version
+ggplot(quakes, aes(x=depth)) + geom_histogram(binwidth=50) # <- with ggplot2 v2
 
 quakes.agg <- aggregate(mag ~ round(depth, -1), data=quakes, FUN=length)
 names(quakes.agg) <- c("depth", "mag")
@@ -45,7 +48,8 @@ ggplot(longley, aes(x=Year, y=Unemployed)) + geom_line()
 
 ## Binning data
 
-ggplot(quakes, aes(x=depth)) + geom_bar(binwidth=50)
+# ggplot(quakes, aes(x=depth)) + geom_bar(binwidth=50)
+ggplot(quakes, aes(x=depth)) + geom_histogram(binwidth=50)
 ggplot(quakes, aes(x=depth)) + stat_bin(binwidth=50)
 
 ## Smoothing data

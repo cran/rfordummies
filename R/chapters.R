@@ -16,26 +16,9 @@
 # @keywords Internal
 # @rdname genChapter
 .genChapter <- function(ch){
-  chapter <- "#' Print examples of chapter <<x>> of 'R for Dummies'.
-#' 
-#' To print a listing of all examples of a chapter, use \\code{ch<<x>>()}. To run all the examples of \\code{ch<<x>>()}, use \\code{example(ch<<x>>)}.
-#' @export
-#' @rdname ch<<xx>>
-#' @family Chapters
-#' @seealso \\code{\\link{toc}}
-#' @example /inst/scripts/2-clean/ch<<xx>>.R
-ch<<xx>> <- function(){
-  text <- .readExampleFile(\"ch<<xx>>.R\")
-  cat(text, sep=\"\n\")
-  invisible(text)
-}
-"
-chapterExtra <- "
-#' @export
-#' @aliases ch<<xx>>
-#' @rdname ch<<xx>>
-ch<<x>> <- ch<<xx>>
-"
+  chapter <- "#' Print examples of chapter <<x>> of 'R for Dummies'.\n#'\n#' To print a listing of all examples of a chapter, use \\code{ch<<x>>()}. To run all the examples of \\code{ch<<x>>()}, use \\code{example(ch<<x>>)}.\n#' @export\n#' @rdname ch<<xx>>\n#' @family Chapters\n#' @seealso \\code{\\link{toc}}\n#' @example inst/scripts/2-clean/ch<<xx>>.R\nch<<xx>> <- function(){\n  text <- .readExampleFile(\"ch<<xx>>.R\")\n  cat(text, sep=\"\n\")
+  invisible(text)\n}\n"
+chapterExtra <- "#' @export\n#' @aliases ch<<xx>>\n#' @rdname ch<<xx>>\nch<<x>> <- ch<<xx>>"
   if(!is.numeric(ch)) stop ("ch should be numeric")
   chapter <- gsub("<<x>>", sprintf("%s", ch), chapter)
   out1 <- gsub("<<xx>>", sprintf("%02d", ch), chapter)
