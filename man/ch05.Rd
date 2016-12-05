@@ -10,7 +10,8 @@ ch05()
 ch5()
 }
 \description{
-To print a listing of all examples of a chapter, use \code{ch5()}. To run all the examples of \code{ch5()}, use \code{example(ch5)}.
+To print a listing of all examples of a chapter, use \code{ch5()}. 
+To run all the examples of \code{ch5()}, use \code{example(ch5)}.
 }
 \examples{
 # Chapter 5 - Getting Started with Reading and Writing

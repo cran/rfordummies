@@ -10,7 +10,8 @@ ch02()
 ch2()
 }
 \description{
-To print a listing of all examples of a chapter, use \code{ch2()}. To run all the examples of \code{ch2()}, use \code{example(ch2)}.
+To print a listing of all examples of a chapter, use \code{ch2()}. 
+To run all the examples of \code{ch2()}, use \code{example(ch2)}.
 }
 \examples{
 # Chapter 2 - Exploring R
@@ -103,9 +104,12 @@ ls()
 ##Saving your work
 
 getwd()
+
+filename <- file.path(tempdir(), "yourname.rda")
 \dontrun{
-save(yourname, file="yourname.rda")
+save(yourname, file=filename)
 }
+list.files(tempdir(), pattern = ".rda")
 
 ## Retrieving your work
 

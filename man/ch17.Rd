@@ -7,7 +7,8 @@
 ch17()
 }
 \description{
-To print a listing of all examples of a chapter, use \code{ch17()}. To run all the examples of \code{ch17()}, use \code{example(ch17)}.
+To print a listing of all examples of a chapter, use \code{ch17()}. 
+To run all the examples of \code{ch17()}, use \code{example(ch17)}.
 }
 \examples{
 # Chapter 17 - Creating Faceted Graphics with Lattice
@@ -147,9 +148,9 @@ print(my.plot)
 
 ## Saving a lattice plot to file
 
-setwd("~/")
+filename <- file.path(tempdir(), "xyplot")
 \dontrun{
-trellis.device(device="png", filename="xyplot.png")
+trellis.device(device="png", filename=filename)
 }
 print(my.plot)
 \dontrun{

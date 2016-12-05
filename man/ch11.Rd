@@ -7,7 +7,8 @@
 ch11()
 }
 \description{
-To print a listing of all examples of a chapter, use \code{ch11()}. To run all the examples of \code{ch11()}, use \code{example(ch11)}.
+To print a listing of all examples of a chapter, use \code{ch11()}. 
+To run all the examples of \code{ch11()}, use \code{example(ch11)}.
 }
 \examples{
 # Chapter 11 - Getting Help

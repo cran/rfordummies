@@ -10,7 +10,8 @@ ch08()
 ch8()
 }
 \description{
-To print a listing of all examples of a chapter, use \code{ch8()}. To run all the examples of \code{ch8()}, use \code{example(ch8)}.
+To print a listing of all examples of a chapter, use \code{ch8()}. 
+To run all the examples of \code{ch8()}, use \code{example(ch8)}.
 }
 \examples{
 # Chapter 8

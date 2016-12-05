@@ -61,7 +61,11 @@ paste("Hello", "world!")
 ## Talking back to the user
 
 h <- "Hello"
+if(interactive()){
 yourname <- readline("What is your name?")
+} else {
+  yourname <- "Joris"
+}
 paste(h, yourname)
 
 # Sourcing a Script
@@ -86,7 +90,10 @@ ls()
 ##Saving your work
 
 getwd()
-save(yourname, file="yourname.rda")
+
+filename <- file.path(tempdir(), "yourname.rda")
+save(yourname, file=filename)
+list.files(tempdir(), pattern = ".rda")
 
 ## Retrieving your work
 

@@ -10,7 +10,8 @@ ch04()
 ch4()
 }
 \description{
-To print a listing of all examples of a chapter, use \code{ch4()}. To run all the examples of \code{ch4()}, use \code{example(ch4)}.
+To print a listing of all examples of a chapter, use \code{ch4()}. 
+To run all the examples of \code{ch4()}, use \code{example(ch4)}.
 }
 \examples{
 # Chapter 4 - Getting Started with Arithmetic

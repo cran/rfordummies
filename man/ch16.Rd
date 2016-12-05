@@ -7,7 +7,8 @@
 ch16()
 }
 \description{
-To print a listing of all examples of a chapter, use \code{ch16()}. To run all the examples of \code{ch16()}, use \code{example(ch16)}.
+To print a listing of all examples of a chapter, use \code{ch16()}. 
+To run all the examples of \code{ch16()}, use \code{example(ch16)}.
 }
 \examples{
 # Chapter 16 - Using Base Graphics
@@ -113,10 +114,9 @@ par(old.par)
 
 # Saving Graphics to Image Files
 
-setwd("~/")
-getwd()
+filename <- file.path(tempdir(), "faithful.png")
 \dontrun{
-png(filename="faithful.png")
+png(filename=filename)
 }
 plot(faithful)
 \dontrun{

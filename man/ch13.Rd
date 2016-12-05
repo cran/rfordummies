@@ -7,10 +7,11 @@
 ch13()
 }
 \description{
-To print a listing of all examples of a chapter, use \code{ch13()}. To run all the examples of \code{ch13()}, use \code{example(ch13)}.
+To print a listing of all examples of a chapter, use \code{ch13()}. 
+To run all the examples of \code{ch13()}, use \code{example(ch13)}.
 }
 \examples{
-# Chapter 13 - Manipulating and Processing Data
+# C hapter 13 - Manipulating and Processing Data
 
 # Deciding on the Most Appropriate Data Structure
 

@@ -7,7 +7,8 @@
 ch19()
 }
 \description{
-To print a listing of all examples of a chapter, use \code{ch19()}. To run all the examples of \code{ch19()}, use \code{example(ch19)}.
+To print a listing of all examples of a chapter, use \code{ch19()}. 
+To run all the examples of \code{ch19()}, use \code{example(ch19)}.
 }
 \examples{
 # Chapter 19 - Ten Things You Can Do in R That You Would've Done in Microsoft Excel

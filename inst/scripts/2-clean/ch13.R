@@ -1,4 +1,4 @@
-# Chapter 13 - Manipulating and Processing Data
+# C hapter 13 - Manipulating and Processing Data
 
 # Deciding on the Most Appropriate Data Structure
 

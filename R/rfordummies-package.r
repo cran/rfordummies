@@ -30,5 +30,4 @@ NULL
 #' @docType data
 #' @source \url{http://en.wikipedia.org/wiki/Periodic_table}
 #' @keywords data
-#'@importFrom utils data write.csv
 NULL
