@@ -10,7 +10,7 @@ ch02()
 ch2()
 }
 \description{
-To print a listing of all examples of a chapter, use \code{ch2()}. 
+To print a listing of all examples of a chapter, use \code{ch2()}.
 To run all the examples of \code{ch2()}, use \code{example(ch2)}.
 }
 \examples{
@@ -79,7 +79,11 @@ paste("Hello", "world!")
 ## Talking back to the user
 
 h <- "Hello"
+if(interactive()){
 yourname <- readline("What is your name?")
+} else {
+  yourname <- "Joris"
+}
 paste(h, yourname)
 
 # Sourcing a Script
@@ -134,4 +138,4 @@ Other Chapters: \code{\link{ch01}}, \code{\link{ch03}},
   \code{\link{ch18}}, \code{\link{ch19}},
   \code{\link{ch20}}
 }
-
+\concept{Chapters}

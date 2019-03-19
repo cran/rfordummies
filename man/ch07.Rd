@@ -10,7 +10,7 @@ ch07()
 ch7()
 }
 \description{
-To print a listing of all examples of a chapter, use \code{ch7()}. 
+To print a listing of all examples of a chapter, use \code{ch7()}.
 To run all the examples of \code{ch7()}, use \code{example(ch7)}.
 }
 \examples{
@@ -375,4 +375,4 @@ Other Chapters: \code{\link{ch01}}, \code{\link{ch02}},
   \code{\link{ch18}}, \code{\link{ch19}},
   \code{\link{ch20}}
 }
-
+\concept{Chapters}

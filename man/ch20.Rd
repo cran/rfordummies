@@ -7,7 +7,7 @@
 ch20()
 }
 \description{
-To print a listing of all examples of a chapter, use \code{ch20()}. 
+To print a listing of all examples of a chapter, use \code{ch20()}.
 To run all the examples of \code{ch20()}, use \code{example(ch20)}.
 }
 \examples{
@@ -55,7 +55,9 @@ install.packages("data.table", repos="http://R-Forge.R-project.org")
 
 ## Conducting Installations from BioConductor
 
+\dontrun{
 source("http://bioconductor.org/biocLite.R")
+}
 
 ## Reading the R Manual
 
@@ -74,4 +76,4 @@ Other Chapters: \code{\link{ch01}}, \code{\link{ch02}},
   \code{\link{ch17}}, \code{\link{ch18}},
   \code{\link{ch19}}
 }
-
+\concept{Chapters}

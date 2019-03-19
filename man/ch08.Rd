@@ -10,7 +10,7 @@ ch08()
 ch8()
 }
 \description{
-To print a listing of all examples of a chapter, use \code{ch8()}. 
+To print a listing of all examples of a chapter, use \code{ch8()}.
 To run all the examples of \code{ch8()}, use \code{example(ch8)}.
 }
 \examples{
@@ -26,7 +26,9 @@ percent <- round(x * 100, digits = 1)
 result <- paste(percent, "\%", sep = "")
 print(result)
 
+\dontrun{
 # source('pastePercent.R') # Only after saving
+}
 
 ## Transforming the script
 
@@ -240,4 +242,4 @@ Other Chapters: \code{\link{ch01}}, \code{\link{ch02}},
   \code{\link{ch18}}, \code{\link{ch19}},
   \code{\link{ch20}}
 }
-
+\concept{Chapters}

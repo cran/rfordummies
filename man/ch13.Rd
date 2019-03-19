@@ -7,7 +7,7 @@
 ch13()
 }
 \description{
-To print a listing of all examples of a chapter, use \code{ch13()}. 
+To print a listing of all examples of a chapter, use \code{ch13()}.
 To run all the examples of \code{ch13()}, use \code{example(ch13)}.
 }
 \examples{
@@ -300,4 +300,4 @@ Other Chapters: \code{\link{ch01}}, \code{\link{ch02}},
   \code{\link{ch18}}, \code{\link{ch19}},
   \code{\link{ch20}}
 }
-
+\concept{Chapters}

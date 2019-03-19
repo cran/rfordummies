@@ -2,8 +2,18 @@
 # Install dependencies ----------------------------------------------------
 
 local({
-  dependencies <- c("fortunes", "stringr", "sos", "XLConnect", "reshape2", "ggplot2", "foreign")
-  for(pkg in dependencies) if(!require(pkg, character.only = TRUE)) install.packages(pkg)
+  dependencies <- c(
+    "fortunes", 
+    "stringr", 
+    "sos", 
+    "XLConnect", 
+    "reshape2", 
+    "ggplot2", 
+    "foreign"
+  )
+  for (pkg in dependencies) {
+    if (!require(pkg, character.only = TRUE)) install.packages(pkg)
+  }
 })
 
 
@@ -11,13 +21,20 @@ local({
 # Build package -----------------------------------------------------------
 
 
-list.files("rfordummies/inst/")
-source("rfordummies/inst/cleanscripts.R", local=TRUE)
-devtools::load_all("rfordummies"); .generateChapters(path="rfordummies")
-devtools::document("rfordummies")
-devtools::check_man("rfordummies")
-devtools::check("rfordummies")
-devtools::run_examples("rfordummies")
+list.files(here::here("inst"))
+
+local({
+  source(here::here("inst/cleanscripts.R"), local = TRUE)
+  source(here::here("inst/chapters.R"), local = TRUE)
+  .generateChapters()
+})
+devtools::load_all()
+devtools::document()
+devtools::check_man()
+devtools::test()
+devtools::run_examples(run = FALSE)
+devtools::check()
+covr::package_coverage()
 
 
 
@@ -31,15 +48,18 @@ devtools::run_examples("rfordummies")
 # Run all the examples
 library(foreach)
 oldwd <- getwd()
-foreach(ch = paste0("ch", 1:20), 
-        .errorhandling="pass", 
-        .combine = c) %do% {
-          system.time(devtools::dev_example(ch))[[3]]
-        }
-sapply(paste0("ch", 1:20), 
-       function(ch){
-         system.time(devtools::dev_example(ch))[[3]]
-       }
+foreach(
+  ch = paste0("ch", 1:20),
+  .errorhandling = "pass",
+  .combine = c
+) %do% {
+  system.time(devtools::dev_example(ch))[[3]]
+}
+sapply(
+  paste0("ch", 1:20),
+  function(ch) {
+    system.time(devtools::dev_example(ch))[[3]]
+  }
 )
 setwd(oldwd)
 
@@ -51,8 +71,8 @@ devtools::dev_example("ch1")
 
 # add_travis(pkg)
 # run_examples(pkg, start = "ch2")
-devtools::run_examples("rfordummies", fresh=TRUE, start="ch7")
-devtools::run_examples("rfordummies", fresh=TRUE)
+devtools::run_examples("rfordummies", fresh = TRUE, start = "ch7")
+devtools::run_examples("rfordummies", fresh = TRUE)
 
 
 
@@ -66,12 +86,13 @@ tools::showNonASCII
 # Show manual -------------------------------------------------------------
 
 
-showPDFmanual <- function(package, lib.loc=NULL) 
-{ 
-  path <- find.package(package, lib.loc) 
-  system(paste(shQuote(file.path(R.home("bin"), "R")), 
-               "CMD", "Rd2pdf", 
-               shQuote(path))) 
-} 
+showPDFmanual <- function(package, lib.loc = NULL) {
+  path <- find.package(package, lib.loc)
+  system(paste(
+    shQuote(file.path(R.home("bin"), "R")),
+    "CMD", "Rd2pdf",
+    shQuote(path)
+  ))
+}
 
 showPDFmanual("rfordummies")

@@ -10,7 +10,7 @@ ch05()
 ch5()
 }
 \description{
-To print a listing of all examples of a chapter, use \code{ch5()}. 
+To print a listing of all examples of a chapter, use \code{ch5()}.
 To run all the examples of \code{ch5()}, use \code{example(ch5)}.
 }
 \examples{
@@ -202,4 +202,4 @@ Other Chapters: \code{\link{ch01}}, \code{\link{ch02}},
   \code{\link{ch18}}, \code{\link{ch19}},
   \code{\link{ch20}}
 }
-
+\concept{Chapters}
