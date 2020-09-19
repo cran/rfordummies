@@ -19,7 +19,7 @@
 #'
 #' @name rfordummies
 #' @docType package
-#' @references de Vries, A. , & Meys, J. (2012). <i>R for dummies</i>. Chichester: Wiley. \url{https://rfordummies.com/}, ISBN-13: 978-1119962847.
+#' @references de Vries, A. , & Meys, J. (2012). <i>R for dummies</i>. Chichester: Wiley. https://rfordummies.com/, ISBN-13: 978-1119962847.
 #' @docType package
 NULL
 
@@ -43,6 +43,6 @@ NULL
 #' 
 #' @name elements
 #' @docType data
-#' @source \url{http://en.wikipedia.org/wiki/Periodic_table}
+#' @source \url{https://en.wikipedia.org/wiki/Periodic_table}
 #' @keywords data
 NULL
