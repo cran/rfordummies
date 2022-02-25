@@ -11,6 +11,7 @@ To print a listing of all examples of a chapter, use \code{ch18()}.
 To run all the examples of \code{ch18()}, use \code{example(ch18)}.
 }
 \examples{
+if (interactive()) {
 # Chapter 18 - Looking At ggplot2 Graphics
 
 # Installing and Loading ggplot2
@@ -37,7 +38,6 @@ ggplot(faithful, aes(x=eruptions, y=waiting)) + geom_point() + stat_smooth()
 ### Creating a bar chart
 
 ggplot(quakes, aes(x=depth)) + geom_bar()
-ggplot(quakes, aes(x=depth)) + geom_bar(binwidth=50)
 ggplot(quakes, aes(x=depth)) + geom_histogram(binwidth=50)
 
 quakes.agg <- aggregate(mag ~ round(depth, -1), data=quakes, FUN=length)
@@ -61,8 +61,8 @@ ggplot(longley, aes(x=Year, y=Unemployed)) + geom_line()
 
 ## Binning data
 
-ggplot(quakes, aes(x=depth)) + geom_bar(binwidth=50)
-ggplot(quakes, aes(x=depth)) + stat_bin(binwidth=50)
+ggplot(quakes, aes(x=depth)) + geom_bar()
+ggplot(quakes, aes(x=depth)) + stat_bin(binwidth = 50)
 
 ## Smoothing data
 
@@ -100,6 +100,7 @@ ggplot(mtcars, aes(x=hp, y=mpg)) + geom_point(color="red") +
    ylab("Fuel consumption (mpg)") +
    ggtitle("Motor car comparison")
 
+}
 }
 \seealso{
 \code{\link{toc}}

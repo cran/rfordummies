@@ -1,3 +1,4 @@
+if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {
 # Chapter 9
 # Controlling the Logical Flow
 
@@ -10,7 +11,7 @@ priceCalculator <- function(hours, pph=40){
 
 priceCalculator <- function(hours, pph=40){
     net.price <- hours * pph
-    if(hours > 100) {
+    if (hours > 100) {
       net.price <- net.price * 0.9
     }
     round(net.price)
@@ -64,7 +65,7 @@ priceCalculator <- function(hours, pph=40, public=TRUE){
 
 ## Looking at the problem
 
-priceCalculator(c(25,110))
+#priceCalculator(c(25,110))
 priceCalculator(110)
 c(25, 110) > 100
 
@@ -239,3 +240,4 @@ sapply(clients, unique)
 sapply(clients[c(1,3), ], unique)
 
 lapply(clients[c(1,3), ], unique)
+}

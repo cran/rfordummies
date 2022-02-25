@@ -14,6 +14,7 @@ To print a listing of all examples of a chapter, use \code{ch6()}.
 To run all the examples of \code{ch6()}, use \code{example(ch6)}.
 }
 \examples{
+if (interactive()) {
 # Chapter 6 - Going on a Date with R
 
 # Working with Dates
@@ -43,6 +44,7 @@ as.Date("27/7/12", format="\%d/\%m/\%y")
 apollo <- "July 20, 1969, 20:17:39"
 apollo.fmt <- "\%B \%d, \%Y, \%H:\%M:\%S"
 xct <- as.POSIXct(apollo, format=apollo.fmt, tz="UTC")
+xct <- as.POSIXct(apollo, format=apollo.fmt)
 xct
 
 format(xct, "\%d/\%m/\%y")
@@ -84,6 +86,7 @@ unclass(xlt)
 
 
 
+}
 }
 \seealso{
 \code{\link{toc}}

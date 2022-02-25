@@ -6,7 +6,7 @@ local({
     "fortunes", 
     "stringr", 
     "sos", 
-    "XLConnect", 
+    # "XLConnect", 
     "reshape2", 
     "ggplot2", 
     "foreign"
@@ -32,10 +32,12 @@ devtools::load_all()
 devtools::document()
 devtools::check_man()
 devtools::test()
-devtools::run_examples(run = FALSE)
+# options(warn = 2)
+devtools::run_examples(run_dontrun = FALSE, fresh = FALSE)
+warnings()
 devtools::check()
 covr::package_coverage()
-
+urlchecker::url_check()
 
 
 # help(package=rfordummies)

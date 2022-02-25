@@ -1,4 +1,5 @@
-# C hapter 13 - Manipulating and Processing Data
+if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {
+# Chapter 13 - Manipulating and Processing Data
 
 # Deciding on the Most Appropriate Data Structure
 
@@ -202,7 +203,6 @@ apply(Titanic, c(3, 4), sum)
 
 lapply(iris, class)
 sapply(iris, class)
-sapply(iris, mean)
 sapply(iris, function(x) ifelse(is.numeric(x), mean(x), NA))
 
 ## Using tapply() to create tabular summaries
@@ -272,3 +272,4 @@ dcast(mgoals,  Venue + variable ~ Game , sum)
 
 library(ggplot2)
 ggplot(mgoals, aes(x=variable, y=value, fill=Game)) + geom_bar(stat="identity")
+}

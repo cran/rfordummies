@@ -1,4 +1,10 @@
-# rfordummies 0.1.5 (Release date 2020-09-19)
+# rfordummies 0.1.6
+
+* Remove references to `XLConnect` to remove `rJava` dependency
+* Update examples to comply with CRAN build policy
+
+
+# rfordummies 0.1.5
 
 * Updated unit tests to comply with `testthat_3.0.0`
 

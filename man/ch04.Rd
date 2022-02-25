@@ -14,6 +14,7 @@ To print a listing of all examples of a chapter, use \code{ch4()}.
 To run all the examples of \code{ch4()}, use \code{example(ch4)}.
 }
 \examples{
+if (interactive()) {
 # Chapter 4 - Getting Started with Arithmetic
 
 # Working with Numbers, Infinity, and Missing Values
@@ -253,11 +254,8 @@ sum(points)
 
 sum(Granny.pointers * c(2,3))
 
-
-
-round(diff(baskets.of.Granny) / baskets.of.Granny * 100 )
 round(diff(baskets.of.Granny) / baskets.of.Granny[1:5] * 100)
-
+}
 }
 \seealso{
 \code{\link{toc}}
